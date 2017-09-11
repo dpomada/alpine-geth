@@ -12,4 +12,4 @@ RUN apk add --no-cache --virtual .build-deps git make go alpine-sdk linux-header
   cd .. && \
   rm -rf go-ethereum
 
-CMD ["/usr/bin/geth", "--fast", "--cache=512", "--rpc"]
+CMD ["/usr/bin/geth", "--fast", "--cache=512", "--rpc", "--rpcaddr", "0.0.0.0"]
