@@ -1,6 +1,8 @@
 FROM alpine:latest
 MAINTAINER Chance Hudson
 
+EXPOSE 8545
+
 RUN apk add --no-cache --virtual .build-deps git make go alpine-sdk linux-headers && \
   git clone https://github.com/ethereum/go-ethereum.git && \
   cd go-ethereum && \
