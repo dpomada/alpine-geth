@@ -5,8 +5,8 @@ EXPOSE 8545
 
 RUN apk add --no-cache --virtual .build-deps git make go alpine-sdk linux-headers && \
   git clone https://github.com/ethereum/go-ethereum.git && \
-  git checkout release/1.7 && \
   cd go-ethereum && \
+  git checkout release/1.7 && \
   make geth && \
   mv ./build/bin/geth /usr/bin/geth && \
   apk del .build-deps && \
